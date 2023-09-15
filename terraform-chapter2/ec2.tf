@@ -31,7 +31,7 @@ resource "aws_security_group_rule" "example_ec2_out" {
 
 # EC2インスタンス
 resource "aws_instance" "example_ec2" {
-  instance_type = "t2.micro"
+  instance_type = "t2.large"
   ami           = "ami-04beabd6a4fb6ab6f"
   subnet_id     = aws_subnet.example_subnet_a.id
   vpc_security_group_ids = [
